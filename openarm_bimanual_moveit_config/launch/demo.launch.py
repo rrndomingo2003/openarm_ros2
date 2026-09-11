@@ -200,6 +200,17 @@ def moveit_nodes_spawner(context: LaunchContext, arm_type, use_fake_hardware):
     rviz_cfg = os.path.join(moveit_pkg_path, "config",
                             config_dir, "moveit.rviz")
 
+    servo_node = Node(
+        package="moveit_servo",
+        executable="servo_node_main",
+        name="servo_node",
+        output="screen",
+        parameters=[
+            moveit_params,
+            os.path.join(moveit_pkg_path, "config", "servo_params.yaml"),
+        ],
+    )
+
     return [
         Node(
             package="moveit_ros_move_group",
@@ -215,6 +226,7 @@ def moveit_nodes_spawner(context: LaunchContext, arm_type, use_fake_hardware):
             arguments=["-d", rviz_cfg],
             parameters=[moveit_params],
         ),
+        servo_node,
     ]
 
 

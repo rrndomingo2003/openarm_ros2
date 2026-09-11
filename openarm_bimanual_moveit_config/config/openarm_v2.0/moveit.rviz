@@ -1,14 +1,19 @@
 Panels:
   - Class: rviz_common/Displays
-    Help Height: 138
+    Help Height: 0
     Name: Displays
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
         - /MotionPlanning1/Scene Robot1
         - /MotionPlanning1/Planning Request1
+        - /Pose1
+        - /Pose1/Status1
+        - /TF1
+        - /TF1/Frames1
+        - /TF1/Tree1
       Splitter Ratio: 0.5
-    Tree Height: 254
+    Tree Height: 140
   - Class: rviz_common/Help
     Name: Help
   - Class: rviz_common/Views
@@ -73,21 +78,22 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          openarm_left_hand:
+          openarm_left_base_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          openarm_left_hand_tcp:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          openarm_left_left_finger:
+          openarm_left_ee_base_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          openarm_left_link0:
+          openarm_left_ee_link1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          openarm_left_ee_link2:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -122,35 +128,22 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          openarm_left_link7:
+          openarm_right_base_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          openarm_left_link8:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          openarm_left_right_finger:
+          openarm_right_ee_base_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          openarm_right_hand:
+          openarm_right_ee_link1:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          openarm_right_hand_tcp:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          openarm_right_left_finger:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          openarm_right_link0:
+          openarm_right_ee_link2:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -181,20 +174,6 @@ Visualization Manager:
             Show Trail: false
             Value: true
           openarm_right_link6:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          openarm_right_link7:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          openarm_right_link8:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          openarm_right_right_finger:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -226,7 +205,7 @@ Visualization Manager:
         Goal State Color: 20; 93; 250
         Interactive Marker Size: 0
         Joint Violation Color: 255; 0; 255
-        Planning Group: upper_body
+        Planning Group: left_arm
         Query Goal State: true
         Query Start State: false
         Show Workspace: false
@@ -254,21 +233,22 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          openarm_left_hand:
+          openarm_left_base_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          openarm_left_hand_tcp:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          openarm_left_left_finger:
+          openarm_left_ee_base_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          openarm_left_link0:
+          openarm_left_ee_link1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          openarm_left_ee_link2:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -303,35 +283,22 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          openarm_left_link7:
+          openarm_right_base_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          openarm_left_link8:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          openarm_left_right_finger:
+          openarm_right_ee_base_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          openarm_right_hand:
+          openarm_right_ee_link1:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          openarm_right_hand_tcp:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          openarm_right_left_finger:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          openarm_right_link0:
+          openarm_right_ee_link2:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -366,20 +333,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          openarm_right_link7:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          openarm_right_link8:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-          openarm_right_right_finger:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
           world:
             Alpha: 1
             Show Axes: false
@@ -389,6 +342,109 @@ Visualization Manager:
         Show Robot Visual: true
       Value: true
       Velocity_Scaling_Factor: 0.1
+    - Alpha: 1
+      Axes Length: 0.5
+      Axes Radius: 0.05000000074505806
+      Class: rviz_default_plugins/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Axes
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /omega/pose
+      Value: true
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        openarm_body_link0:
+          Value: true
+        openarm_left_base_link:
+          Value: true
+        openarm_left_ee_base_link:
+          Value: true
+        openarm_left_ee_link1:
+          Value: true
+        openarm_left_ee_link2:
+          Value: true
+        openarm_left_link1:
+          Value: true
+        openarm_left_link2:
+          Value: true
+        openarm_left_link3:
+          Value: true
+        openarm_left_link4:
+          Value: true
+        openarm_left_link5:
+          Value: true
+        openarm_left_link6:
+          Value: true
+        openarm_right_base_link:
+          Value: true
+        openarm_right_ee_base_link:
+          Value: true
+        openarm_right_ee_link1:
+          Value: true
+        openarm_right_ee_link2:
+          Value: true
+        openarm_right_link1:
+          Value: true
+        openarm_right_link2:
+          Value: true
+        openarm_right_link3:
+          Value: true
+        openarm_right_link4:
+          Value: true
+        openarm_right_link5:
+          Value: true
+        openarm_right_link6:
+          Value: true
+        world:
+          Value: true
+      Marker Scale: 0.5
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: false
+      Tree:
+        world:
+          openarm_body_link0:
+            openarm_left_base_link:
+              openarm_left_link1:
+                openarm_left_link2:
+                  openarm_left_link3:
+                    openarm_left_link4:
+                      openarm_left_link5:
+                        openarm_left_link6:
+                          openarm_left_ee_base_link:
+                            openarm_left_ee_link1:
+                              {}
+                            openarm_left_ee_link2:
+                              {}
+            openarm_right_base_link:
+              openarm_right_link1:
+                openarm_right_link2:
+                  openarm_right_link3:
+                    openarm_right_link4:
+                      openarm_right_link5:
+                        openarm_right_link6:
+                          openarm_right_ee_base_link:
+                            openarm_right_ee_link1:
+                              {}
+                            openarm_right_ee_link2:
+                              {}
+      Update Interval: 0
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -407,31 +463,90 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.3624029159545898
+      Distance: 2.5300374031066895
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.05883333832025528
-        Y: 0.2625991404056549
-        Z: 0.3334124982357025
+        X: -0.029910946264863014
+        Y: 0.034898459911346436
+        Z: 0.3581046462059021
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.31999996304512024
+      Pitch: 0.34499993920326233
       Target Frame: world
       Value: Orbit (rviz_default_plugins)
-      Yaw: 0.16200032830238342
-    Saved: ~
+      Yaw: 0.29699644446372986
+    Saved:
+      - Class: rviz_default_plugins/Orbit
+        Distance: 1.8865152597427368
+        Enable Stereo Rendering:
+          Stereo Eye Separation: 0.05999999865889549
+          Stereo Focal Distance: 1
+          Swap Stereo Eyes: false
+          Value: false
+        Focal Point:
+          X: -0.029910946264863014
+          Y: 0.034898459911346436
+          Z: 0.3581046462059021
+        Focal Shape Fixed Size: true
+        Focal Shape Size: 0.05000000074505806
+        Invert Z Axis: false
+        Name: Orbit
+        Near Clip Distance: 0.009999999776482582
+        Pitch: 0.2750000059604645
+        Target Frame: world
+        Value: Orbit (rviz_default_plugins)
+        Yaw: 5.940180778503418
+      - Class: rviz_default_plugins/Orbit
+        Distance: 1.8865152597427368
+        Enable Stereo Rendering:
+          Stereo Eye Separation: 0.05999999865889549
+          Stereo Focal Distance: 1
+          Swap Stereo Eyes: false
+          Value: false
+        Focal Point:
+          X: -0.029910946264863014
+          Y: 0.034898459911346436
+          Z: 0.3581046462059021
+        Focal Shape Fixed Size: true
+        Focal Shape Size: 0.05000000074505806
+        Invert Z Axis: false
+        Name: Orbit
+        Near Clip Distance: 0.009999999776482582
+        Pitch: 0.2750000059604645
+        Target Frame: world
+        Value: Orbit (rviz_default_plugins)
+        Yaw: 5.940180778503418
+      - Class: rviz_default_plugins/Orbit
+        Distance: 1.8865152597427368
+        Enable Stereo Rendering:
+          Stereo Eye Separation: 0.05999999865889549
+          Stereo Focal Distance: 1
+          Swap Stereo Eyes: false
+          Value: false
+        Focal Point:
+          X: -0.029910946264863014
+          Y: 0.034898459911346436
+          Z: 0.3581046462059021
+        Focal Shape Fixed Size: true
+        Focal Shape Size: 0.05000000074505806
+        Invert Z Axis: false
+        Name: Orbit
+        Near Clip Distance: 0.009999999776482582
+        Pitch: 0.2750000059604645
+        Target Frame: world
+        Value: Orbit (rviz_default_plugins)
+        Yaw: 5.940180778503418
 Window Geometry:
   Displays:
     collapsed: false
-  Width: 1280
-  Height: 720
+  Height: 859
   Help:
     collapsed: false
   Hide Left Dock: false
@@ -440,8 +555,9 @@ Window Geometry:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd00000001000000000000036a000006f0fc0200000005fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000007000fffffffb000000100044006900730070006c0061007900730100000069000001ec0000017800fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006701000002610000036f0000028e00fffffffb0000000800480065006c0070000000029a0000006e000000cf00fffffffb0000000a0056006900650077007301000005dc0000017d0000012300ffffff0000096a000006f000000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000001000000000000036a00000301fc0200000005fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004100fffffffb000000100044006900730070006c006100790073010000003d000000c9000000c900fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e0067010000010c000001880000017d00fffffffb0000000800480065006c0070000000029a0000006e0000006e00fffffffb0000000a00560069006500770073010000029a000000a4000000a400ffffff000001900000030100000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
-  X: 0
-  Y: 64
+  Width: 1280
+  X: 502
+  Y: 120
