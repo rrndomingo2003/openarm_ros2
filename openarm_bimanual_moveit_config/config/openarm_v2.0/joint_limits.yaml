@@ -8,7 +8,7 @@
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expressor implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
@@ -67,61 +67,38 @@ joint_limits:
    max_velocity: 10.0
    has_acceleration_limits: false
    max_acceleration: 0.0
-
-   
   openarm_right_joint1:
    has_velocity_limits: true
    max_velocity: 16.754666
    has_acceleration_limits: false
    max_acceleration: 0.0
-   has_position_limits: true
-   max_position: 3.14159
-   min_position: -3.14159
   openarm_right_joint2:
    has_velocity_limits: true
    max_velocity: 16.754666
    has_acceleration_limits: false
    max_acceleration: 0.0
-   has_position_limits: true
-   max_position: 3.14159
-   min_position: -3.14159
   openarm_right_joint3:
    has_velocity_limits: true
    max_velocity: 5.445426
    has_acceleration_limits: false
    max_acceleration: 0.0
-   has_position_limits: true
-   max_position: 3.14159
-   min_position: -3.14159
   openarm_right_joint4:
    has_velocity_limits: true
    max_velocity: 5.445426
    has_acceleration_limits: false
    max_acceleration: 0.0
-   has_position_limits: true
-   max_position: 3.14159
-   min_position: -3.14159
   openarm_right_joint5:
    has_velocity_limits: true
    max_velocity: 20.943946
    has_acceleration_limits: false
    max_acceleration: 0.0
-   has_position_limits: true
-   max_position: 3.14159
-   min_position: -3.14159
   openarm_right_joint6:
    has_velocity_limits: true
    max_velocity: 20.943946
    has_acceleration_limits: false
    max_acceleration: 0.0
-   has_position_limits: true
-   max_position: 3.14159
-   min_position: -3.14159
   openarm_right_joint7:
    has_velocity_limits: true
    max_velocity: 20.943946
    has_acceleration_limits: false
    max_acceleration: 0.0
-   has_position_limits: true
-   max_position: 3.14159
-   min_position: -3.14159
