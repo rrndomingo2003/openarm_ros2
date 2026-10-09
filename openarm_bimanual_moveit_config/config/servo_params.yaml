@@ -7,7 +7,7 @@
         linear: 0.6
         rotational: 0.4
         joint: 0.02
-      publish_period: 0.034
+      publish_period: 0.068
       command_out_type: trajectory_msgs/JointTrajectory
       publish_joint_positions: true
       publish_joint_velocities: true
